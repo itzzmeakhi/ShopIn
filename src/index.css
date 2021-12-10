@@ -4,9 +4,9 @@
 }
 
 body {
-  color: #DDDDDD;
-  background-color: #DDDDDD;
+  color: #fff;
+  background-color: #fff;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
