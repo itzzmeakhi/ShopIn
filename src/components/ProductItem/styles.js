@@ -75,7 +75,8 @@ export const HighlightsContainer = styled.div`
 
 export const Button = styled.button`
     width: 90%;
-    padding: 10px 0px;
+    min-height: 9%;
+    max-height: 9%;
     font-size: 95%;
     color: #125D98;
     border: 1px solid #125D98;
@@ -90,6 +91,40 @@ export const Button = styled.button`
     &:disabled {
         color: #eb4d4b;
         border: 1px solid #eb4d4b;
+        cursor: not-allowed;
+    }
+`;
+
+export const QuantityContainer = styled.div`
+    width: 90%;
+    min-height: 9%;
+    max-height: 9%;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    * {
+        margin: 0px 20px;
+    }
+`;
+
+export const QtyBtn = styled.button`
+    width: 12%;
+    height: 70%;
+    cursor: pointer;
+    font-size: 90%;
+    border: 1px solid ${props => props.color};
+    color: ${props => props.color};
+    border-radius: 2px;
+    &:hover,
+    &:focus {
+        background-color: ${props => props.color};
+        color: #fff;
+    }
+    &:disabled {
+        opacity: 0.4;
         cursor: not-allowed;
     }
 `;

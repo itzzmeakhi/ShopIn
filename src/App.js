@@ -1,7 +1,7 @@
 import './App.css';
 
 import Navbar from './components/Navbar/Navbar';
-import ProductList from './components/ProductList/ProductList';
+import ProductList from './pages/Products/containers/ProductList';
 
 const App = () => {
   return (

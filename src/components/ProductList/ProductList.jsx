@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ProductItem from '../ProductItem/ProductItem';
-
-import products from './../../data.json';
+import ProductItem from '../../pages/Products/containers/ProductItem';
 
 const Products = styled.div`
     display: flex;
@@ -13,11 +11,12 @@ const Products = styled.div`
     column-gap: 30px
 `;
 
-const ProductList = () => {
+const ProductList = ({ productItems }) => {
+    const { products } = productItems;
     console.log("=> products", products)
     return (
         <Products>
-            {products.map(item => <ProductItem item={item} />)}
+            {products.map(item => <ProductItem item={item} key={item.id} />)}
         </Products>
     );
 }

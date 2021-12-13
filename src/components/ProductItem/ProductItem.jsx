@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { 
         StrikedPrice, 
@@ -8,10 +8,14 @@ import {
         SpecsContainer, 
         RatingContainer, 
         HighlightsContainer, 
-        Button} from './styles';
+        Button,
+        QuantityContainer,
+        QtyBtn
+    } from './styles';
 import { transformToPrice, getDiscountPercent } from './../../utils/helpers';
 
-const ProductItem = ({ item }) => {
+const ProductItem = ({ item, addToCart, updateQty, alreadyInCart, qty }) => {
+    console.log("=> alreadyInCart", qty)
     const { 
             name, 
             thumbnails, 
@@ -22,6 +26,20 @@ const ProductItem = ({ item }) => {
             highlights,
             in_stock 
         } = item;
+
+    const [quantity, setQuantity] = useState(qty);
+
+    const incrementQty = () => {
+        const qty = quantity + 1;
+        setQuantity(qty);
+        updateQty({qty: qty, id: item.id});
+    } 
+
+    const decrementQty = () => {
+        const qty = quantity - 1;
+        setQuantity(qty);
+        updateQty({qty: qty, id: item.id});
+    }
 
     const priceData = () => {
         if(discounted) {
@@ -43,6 +61,8 @@ const ProductItem = ({ item }) => {
             <p>₹ {transformToPrice(current_price)}</p>
         );
     }
+
+
     return (
         <ItemCard>
             <ImageContainer>
@@ -56,13 +76,36 @@ const ProductItem = ({ item }) => {
                 </RatingContainer>
             </SpecsContainer>
             <HighlightsContainer>
-                {highlights.filter((_,index) => index < 4).map(highlight => <p>{highlight}</p>)}
+                {highlights.filter((_,index) => index < 4).map((highlight, idx) => <p key={idx}>{highlight}</p>)}
             </HighlightsContainer>
-            <Button
-                type="button"
-                disabled={!in_stock}>
-                {in_stock ? 'Add to Cart' : 'Out of Stock'}
-            </Button>
+            {(!alreadyInCart && quantity === 0) ?
+                (
+                <Button
+                    type="button"
+                    disabled={!in_stock}
+                    onClick={() => addToCart(item)}>
+                    {in_stock ? 'Add to Cart' : 'Out of Stock'}
+                </Button>
+                ) : (
+                <QuantityContainer>
+                    <QtyBtn
+                        disabled={quantity <= 1}
+                        type="button"
+                        color="#eb4d4b"
+                        onClick={() => decrementQty()}>
+                            -
+                    </QtyBtn>
+                    <span>{quantity}</span>
+                    <QtyBtn 
+                        disabled={quantity >= 10}
+                        type="button"
+                        color="#16a085"
+                        onClick={() => incrementQty()}>
+                            +
+                    </QtyBtn>
+                </QuantityContainer>
+                )
+            }
         </ItemCard>
     );
 }

@@ -1,6 +1,7 @@
 [
     {
         "name": "realme C25Y (Glacier Blue, 64 GB)  (4 GB RAM)",
+        "id": "42f392a2-2d23-4588-932f-a1a3367d9d58",
         "current_price": 10999,
         "original_price": 10999,
         "discounted": false,
@@ -407,6 +408,7 @@
     },
     {
         "name": "POCO C31 (Shadow Gray, 64 GB)  (4 GB RAM)",
+        "id": "69874c76-4824-4015-84f8-b341db8cb392",
         "current_price": 9499,
         "original_price": 11999,
         "discounted": true,
@@ -781,6 +783,7 @@
     },
     {
         "name": "realme Narzo 50A (Oxygen Blue, 64 GB)  (4 GB RAM)",
+        "id": "b509f2d6-49e4-41c1-bc83-9abe8ec4840d",
         "current_price": 11499,
         "original_price": 12999,
         "discounted": true,
@@ -1189,6 +1192,7 @@
     },
     {
         "name": "APPLE iPhone 13 Pro (Sierra Blue, 128 GB)",
+        "id": "129783a2-ef5e-4d7a-855b-7d22e7de52b4",
         "current_price": 119900,
         "original_price": 119900,
         "discounted": false,
@@ -1542,6 +1546,7 @@
     },
     {
         "name": "APPLE iPhone 13 Pro Max (Graphite, 256 GB)",
+        "id": "262fb8d3-1f69-4d03-b832-2ea8eac80109",
         "current_price": 139900,
         "original_price": 139900,
         "discounted": false,
@@ -1895,6 +1900,7 @@
     },
     {
         "name": "Redmi 9 (Sporty Orange, 64 GB)  (4 GB RAM)",
+        "id": "8994ae10-6482-4902-82c7-2071877acd0b",
         "current_price": 10099,
         "original_price": 10076,
         "discounted": true,
@@ -2276,6 +2282,7 @@
     },
     {
         "name": "Redmi K20 (Carbon Black, 128 GB)  (6 GB RAM)",
+        "id": "2d25fefb-261e-43ff-9a38-fa6f682141d4",
         "current_price": 18399,
         "original_price": 17700,
         "discounted": true,
@@ -2588,6 +2595,7 @@
     },
     {
         "name": "REDMI NOTE 10 LITE (Aurora Blue, 64 GB)  (4 GB RAM)",
+        "id": "a5463422-a8bd-4b34-8c55-fbdd77dac117",
         "current_price": 13460,
         "original_price": 13810,
         "discounted": true,
@@ -2746,6 +2754,7 @@
     },
     {
         "name": "APPLE iPhone 12 (Blue, 128 GB)",
+        "id": "6b05fab0-a30b-4072-8be7-ae093cf2e376",
         "current_price": 64999,
         "original_price": 70900,
         "discounted": true,
@@ -3099,6 +3108,7 @@
     },
     {
         "name": "SAMSUNG Galaxy F12 (Sky Blue, 64 GB)  (4 GB RAM)",
+        "id": "111d3485-aee6-4c03-a9cd-738c56410fdd",
         "current_price": 11499,
         "original_price": 12999,
         "discounted": true,
@@ -3501,6 +3511,7 @@
     },
     {
         "name": "MOTOROLA e40 (Pink Clay, 64 GB)  (4 GB RAM)",
+        "id": "65488599-e323-4b69-8d05-bb21786e9d03",
         "current_price": 9999,
         "original_price": 10999,
         "discounted": true,
@@ -3874,6 +3885,7 @@
     },
     {
         "name": "MOTOROLA E7 Power (Tahiti Blue, 64 GB)  (4 GB RAM)",
+        "id": "9267a60a-c163-4fec-bd9f-c2166dda442a",
         "current_price": 8999,
         "original_price": 11999,
         "discounted": true,
@@ -4233,6 +4245,7 @@
     },
     {
         "name": "SAMSUNG Galaxy Note 20 Ultra 5G (Mystic Black, 256 GB)  (12 GB RAM)",
+        "id": "a578b9ff-36e5-4333-8174-8d0b474cfe6c",
         "current_price": 105000,
         "original_price": 105000,
         "discounted": false,
@@ -4626,6 +4639,7 @@
     },
     {
         "name": "Google Pixel 4a (Just Black, 128 GB)  (6 GB RAM)",
+        "id": "e8cd053c-0229-476e-959d-f33289e3d7de",
         "current_price": 28999,
         "original_price": 31999,
         "discounted": true,
@@ -4989,6 +5003,7 @@
     },
     {
         "name": "OPPO A53s 5G (Ink Black, 128 GB)  (6 GB RAM)",
+        "id": "8038f0f0-866d-4864-8c86-baaf1461a913",
         "current_price": 15990,
         "original_price": 16990,
         "discounted": true,
@@ -5336,6 +5351,7 @@
     },
     {
         "name": "APPLE iPhone 12 Pro Max (Pacific Blue, 128 GB)",
+        "id": "aac119cb-c2a7-4b5e-a4b6-b3cae2c66e75",
         "current_price": 119900,
         "original_price": 119900,
         "discounted": false,
@@ -5689,6 +5705,7 @@
     },
     {
         "name": "vivo Y33s (Mirror Black, 128 GB)  (8 GB RAM)",
+        "id": "83a54e08-f322-4526-9418-313ca35c5cec",
         "current_price": 18990,
         "original_price": 18912,
         "discounted": true,
@@ -6085,6 +6102,7 @@
     },
     {
         "name": "vivo Y20T (Purist Blue, 64 GB)  (6 GB RAM)",
+        "id": "011b30fa-a81c-4daa-81f5-08d79b659c1e",
         "current_price": 15490,
         "original_price": 19490,
         "discounted": true,
@@ -6465,6 +6483,7 @@
     },
     {
         "name": "Honor 7A (Blue, 32 GB)  (3 GB RAM)",
+        "id": "a067b415-1ecc-4f27-907a-534aa844d5e6",
         "current_price": 10499,
         "original_price": 10499,
         "discounted": false,
@@ -6818,6 +6837,7 @@
     },
     {
         "name": "Honor Holly (Black/White, 16 GB)  (1 GB RAM)",
+        "id": "07fe430a-b7ba-4063-bd2a-2d53447d0efe",
         "current_price": 5999,
         "original_price": 5999,
         "discounted": false,
