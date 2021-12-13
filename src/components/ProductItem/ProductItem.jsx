@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { 
         StrikedPrice, 
@@ -28,6 +28,10 @@ const ProductItem = ({ item, addToCart, updateQty, alreadyInCart, qty }) => {
         } = item;
 
     const [quantity, setQuantity] = useState(qty);
+
+    useEffect(() => {
+        setQuantity(qty);
+    }, [qty])
 
     const incrementQty = () => {
         const qty = quantity + 1;

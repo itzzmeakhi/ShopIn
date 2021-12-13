@@ -1,8 +1,10 @@
 import { cartActionTypes } from './types';
 import { newCartItems, updateCart } from './utils';
 
+import data from './../../data.json';
+
 const INITIAL_STATE = {
-    cartItems: [{ id: "42f392a2-2d23-4588-932f-a1a3367d9d58", qty: 2}]
+    cartItems: [...data.filter((_,idx) => idx < 4).map(item => {return {...item, qty: 2}})]
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
