@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { 
         StrikedPrice, 
@@ -27,22 +27,12 @@ const ProductItem = ({ item, addToCart, updateQty, alreadyInCart, qty }) => {
             in_stock 
         } = item;
 
-    const [quantity, setQuantity] = useState(qty);
-
-    useEffect(() => {
-        setQuantity(qty);
-    }, [qty])
-
     const incrementQty = () => {
-        const qty = quantity + 1;
-        setQuantity(qty);
-        updateQty({qty: qty, id: item.id});
+        updateQty({qty: qty+1, id: item.id});
     } 
 
     const decrementQty = () => {
-        const qty = quantity - 1;
-        setQuantity(qty);
-        updateQty({qty: qty, id: item.id});
+        updateQty({qty: qty-1, id: item.id});
     }
 
     const priceData = () => {
@@ -69,9 +59,11 @@ const ProductItem = ({ item, addToCart, updateQty, alreadyInCart, qty }) => {
 
     return (
         <ItemCard>
+
             <ImageContainer>
                 <img src={thumbnails[0]} alt={`${name}`} />
             </ImageContainer>
+
             <SpecsContainer>
                 <h4>{name}</h4>
                 {priceData()}
@@ -79,10 +71,12 @@ const ProductItem = ({ item, addToCart, updateQty, alreadyInCart, qty }) => {
                     {rating ? <><span>{rating} &#9733;</span> Rating</>: 'No Ratings'}
                 </RatingContainer>
             </SpecsContainer>
+
             <HighlightsContainer>
                 {highlights.filter((_,index) => index < 4).map((highlight, idx) => <p key={idx}>{highlight}</p>)}
             </HighlightsContainer>
-            {(!alreadyInCart && quantity === 0) ?
+
+            {(!alreadyInCart && qty === 0) ?
                 (
                 <Button
                     type="button"
@@ -93,15 +87,15 @@ const ProductItem = ({ item, addToCart, updateQty, alreadyInCart, qty }) => {
                 ) : (
                 <QuantityContainer>
                     <QtyBtn
-                        disabled={quantity <= 1}
+                        disabled={qty <= 1}
                         type="button"
                         color="#eb4d4b"
                         onClick={() => decrementQty()}>
                             -
                     </QtyBtn>
-                    <span>{quantity}</span>
+                    <span>{qty}</span>
                     <QtyBtn 
-                        disabled={quantity >= 10}
+                        disabled={qty >= 10}
                         type="button"
                         color="#16a085"
                         onClick={() => incrementQty()}>
@@ -110,6 +104,7 @@ const ProductItem = ({ item, addToCart, updateQty, alreadyInCart, qty }) => {
                 </QuantityContainer>
                 )
             }
+            
         </ItemCard>
     );
 }

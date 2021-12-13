@@ -12,5 +12,5 @@ export const getDiscountPercent = (orignalPrice, discountPrice) => {
 export const getGrossDiscount = (originalPrice, discountPrice, qty) => {
     const price = Number(originalPrice);
     const disPrice = Number(discountPrice);
-    return `${transformToPrice((originalPrice - discountPrice)*qty)}`;
+    return `${transformToPrice((price - disPrice)*qty)}`;
 };

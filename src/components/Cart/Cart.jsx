@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import styled from 'styled-components';
 import CartItem from './../../pages/Cart/containers/CartItem';
@@ -18,6 +18,7 @@ const EmptyCart = styled.div`
 
 
 const Cart = ({ cart }) => {
+    console.log("=> cart rendered")
     const { cartItems } = cart;
     return (
         <CartContainer>
@@ -25,7 +26,7 @@ const Cart = ({ cart }) => {
             {cartItems.length === 0 && <EmptyCart> No items in the cart </EmptyCart>}
             {cartItems.length !== 0 && (
                 <ul>
-                    {cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />)}
+                    {cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} qty={cartItem.qty} />)}
                 </ul>
             )}
         </CartContainer>
