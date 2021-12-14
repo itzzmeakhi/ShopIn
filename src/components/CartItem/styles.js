@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
 export const Item = styled.div`
-    width: 60%;
-    height: 150px;
+    width: 80%;
+    min-height: 180px;
     display: flex;
     flex-direction: row;
     align-items: center;
     border: 1px solid #bbb;
+    font-size: 80%;
     border-radius: 5px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 20px 0px;
+    box-sizing: border-box;
+    padding: 10px 20px;
 `;
 
 export const ImageContainer = styled.div`
@@ -26,6 +28,7 @@ export const DescContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 20px;
 `;
 
 export const BrandName = styled.p`

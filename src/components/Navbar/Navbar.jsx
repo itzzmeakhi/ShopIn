@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Cart from './../../pages/Cart/containers/Cart';
+
 const Nav = styled.div`
     width: 100%;
     background-color: #125D98;
@@ -25,13 +27,13 @@ const NavList = styled.ul`
     }
 `;
 
-const Navbar = () => {
+const Navbar = ({ setShowCart }) => {
     return (
         <Nav>
             <header>ShopIn</header>
             <nav>
                 <NavList>
-                    <li>Login</li>
+                    <li onClick={() => setShowCart()}>Login</li>
                     <li>Cart</li>
                     <li>My Account</li>
                 </NavList>
