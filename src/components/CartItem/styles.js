@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 
 export const Item = styled.div`
+    width: 60%;
+    height: 150px;
     display: flex;
     flex-direction: row;
     align-items: center;
     border: 1px solid #bbb;
     border-radius: 5px;
-    margin: 20px 0px;
+    margin: 20px auto;
     padding: 20px;
 `;
 
@@ -20,9 +22,18 @@ export const ImageContainer = styled.div`
 `;
 
 export const DescContainer = styled.div`
+    min-height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`;
+
+export const BrandName = styled.p`
+    color: #125D98;
 `;
 
 export const QuantityContainer = styled.div`
+    width: 30%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,7 +41,7 @@ export const QuantityContainer = styled.div`
 `;
 
 export const QtyBtn = styled.button`
-    width: 12%;
+    width: 30%;
     height: 70%;
     cursor: pointer;
     font-size: 90%;
@@ -48,11 +59,17 @@ export const QtyBtn = styled.button`
     }
 `;
 
-export const Price = styled.div`
-`;
-
 export const Savings = styled.div`
+    font-size: 90%;
+    color: #e67e22;
 `;
 
 export const RemoveCart = styled.a`
+    text-decoration: underline;
+    color: #000;
+    font-size: 80%;
+    cursor: pointer;
+    &:hover {
+        color: #125D98;
+    }
 `;

@@ -6,17 +6,16 @@ import {
         DescContainer, 
         QuantityContainer, 
         QtyBtn,
-        Price,
         Savings,
-        RemoveCart 
+        RemoveCart,
+        BrandName 
     } from './styles';
 import { 
         transformToPrice,
         getGrossDiscount } from '../../utils/helpers';
 
-const CartItem = ({ item, updateQty, qty }) => {
-    console.log("=> cartItem rendered")
-    const { name, thumbnails, current_price, original_price, discounted } = item;
+const CartItem = ({ item, updateQty, qty, removeItem }) => {
+    const { name, thumbnails, current_price, original_price, discounted, id } = item;
 
     const incrementQty = () => {
         updateQty({qty: qty+1, id: item.id});
@@ -32,7 +31,7 @@ const CartItem = ({ item, updateQty, qty }) => {
             </ImageContainer>
 
             <DescContainer>
-                <p>{name}</p>
+                <BrandName>{name}</BrandName>
                 <QuantityContainer>
                     <QtyBtn
                         disabled={qty <= 1}
@@ -50,14 +49,17 @@ const CartItem = ({ item, updateQty, qty }) => {
                         +
                     </QtyBtn>
                 </QuantityContainer>
-                <Price>{`₹ ${transformToPrice(current_price)} x ${qty} = ${transformToPrice(current_price*qty)}`}</Price>
+                <p>{`₹ ${transformToPrice(current_price)} x ${qty} = ${transformToPrice(current_price*qty)}`}</p>
                 {discounted && 
                     (current_price < original_price) && 
                     (<Savings>
                         {`You saved a total of ${getGrossDiscount(original_price, current_price, qty)} on this product.`}
                     </Savings>)
                 }
-                <RemoveCart>Remove from Cart</RemoveCart>
+                <RemoveCart 
+                    onClick={() => removeItem(id)}>
+                        Remove
+                </RemoveCart>
             </DescContainer>
 
         </Item>

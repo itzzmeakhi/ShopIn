@@ -11,6 +11,9 @@ export const updateCart = (cartItems, item) => {
     const itemIdx = cartItems.findIndex(cartItem => cartItem.id === item.id);
     let updatedCartItems = [...cartItems];
     updatedCartItems[itemIdx].qty = item.qty;
-    console.log("=> updatedCartItems", updatedCartItems)
     return updatedCartItems;
+}
+
+export const removeItem = (cartItems, id) => {
+    return cartItems.filter(item => item.id !== id);
 }

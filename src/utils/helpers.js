@@ -1,4 +1,3 @@
-
 export const transformToPrice = (price) => {
     return Number(price).toLocaleString('en-IN');
 };

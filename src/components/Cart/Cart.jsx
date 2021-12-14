@@ -5,24 +5,19 @@ import CartItem from './../../pages/Cart/containers/CartItem';
 
 const CartContainer = styled.div`
     color: #000;
+    margin-top: 40px;
     ul {
-        width: 60%;
         list-style-type: none;
-        margin: 0 auto;
     }
 `;
 
 const EmptyCart = styled.div`
 `;
 
-
-
 const Cart = ({ cart }) => {
-    console.log("=> cart rendered")
     const { cartItems } = cart;
     return (
         <CartContainer>
-            <h4>My Cart</h4>
             {cartItems.length === 0 && <EmptyCart> No items in the cart </EmptyCart>}
             {cartItems.length !== 0 && (
                 <ul>
