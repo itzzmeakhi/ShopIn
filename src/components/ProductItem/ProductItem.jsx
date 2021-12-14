@@ -15,7 +15,6 @@ import {
 import { transformToPrice, getDiscountPercent } from './../../utils/helpers';
 
 const ProductItem = ({ item, addToCart, updateQty, alreadyInCart, qty }) => {
-    console.log("=> alreadyInCart", qty)
     const { 
             name, 
             thumbnails, 
@@ -36,7 +35,7 @@ const ProductItem = ({ item, addToCart, updateQty, alreadyInCart, qty }) => {
     }
 
     const priceData = () => {
-        if(discounted) {
+        if(discounted && (current_price < original_price)) {
             return (
                 <p>
                     ₹ <StrikedPrice>{
@@ -104,7 +103,7 @@ const ProductItem = ({ item, addToCart, updateQty, alreadyInCart, qty }) => {
                 </QuantityContainer>
                 )
             }
-            
+
         </ItemCard>
     );
 }
