@@ -2,7 +2,7 @@ export const newCartItems = (cartItems, newItem) => {
     const isItemAlreadyInCart = cartItems.findIndex(item => item.id === newItem.id);
     let updatedCartItems = [];
     if(isItemAlreadyInCart === -1) {
-        updatedCartItems = [...cartItems, {...newItem, qty: newItem.qty}];
+        updatedCartItems = [...cartItems, {...newItem, qty: 1}];
     }
     return updatedCartItems;
 }
